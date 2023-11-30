@@ -1,0 +1,50 @@
+
+//Returns a list of all todos whose status is 'TO DO'
+GET http://localhost:3000/todos/?status=TO%20DO
+
+##############################################################
+
+//Returns a specific todo based on the todo ID
+GET http://localhost:3000/todos/2/
+
+##############################################################
+
+//GET Agenda
+GET http://localhost:3000/agenda/?date=2021-02-22
+
+
+//Create a todo in the todo table
+
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+ "id": 20,
+ "todo": "Finalize event theme",
+ "priority": "LOW",
+ "status": "TO DO",
+ "category": "HOME",
+ "dueDate": "2021-02-20"
+}
+
+##############################################################
+
+//Updates the details of a specific todo based on the todo ID
+
+PUT http://localhost:3000/todos/39/
+Content-Type: application/json
+
+{
+"todo": "Clean the "
+}
+
+# { "dueDate": "2021-01-12" }
+
+#################################################################
+
+DELETE http://localhost:3000/todos/10/
+
+
+
+
+
